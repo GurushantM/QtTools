@@ -36,7 +36,7 @@ find_package(Qt5Sql CONFIG REQUIRED)
 find_package(Qt5Network CONFIG REQUIRED)
 
 # Globs all the files and adds to the exe
-file(GLOB_RECURSE SOURCE_FILES "*.cc" "*.h" "*.ui" "*.qrc" "*.rc")
+file(GLOB_RECURSE SOURCE_FILES "*.cc" "*.h" "*.ui" "*.qrc" "*.rc" "*.cpp")
 foreach(_source IN ITEMS ${SOURCE_FILES})
     get_filename_component(_source_path "${_source}" PATH)
     string(REPLACE "${CMAKE_SOURCE_DIR}" "" _group_path "${_source_path}")
